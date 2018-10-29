@@ -1,0 +1,4 @@
+services:
+  weather.service:
+    class: Drupal\weather\WeatherService
+    arguments: ['@config.factory']

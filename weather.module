@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Defines common functionality for all Weather module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function weather_theme() {
+  return [
+    'weather' => [
+      'variables' => [
+        'weather' => [],
+      ],
+      'template' => 'weather',
+    ],
+  ];
+}

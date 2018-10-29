@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation for displaying the city weather.
+ *
+ * Available variables:
+ *   - weather The array of city weather.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'weather-city',
+  ]
+%}
+{{ kint(weather) }}
+<div {{ attributes.addClass(classes) }}>
+  <h3>{{ weather.name }}</h3>
+  <div class="row">
+    <div class="left"><img src="{{ weather.icon }}" /></div>
+    <div class="right temperature">{{ weather.temp }} {{ weather.scale|raw }}</div>
+  </div>
+  <div>{{ weather.description }}</div>
+  <div>{{ 'Pressure'|trans }}: {{ weather.pressure }}</div>
+  <div>{{ 'Humidity'|trans }}: {{ weather.humidity }}</div>
+  <div>{{ 'Sunrise'|trans }}: {{ weather.sunrise }}</div>
+  <div>{{ 'Sunset'|trans }}: {{ weather.sunset }}</div>
+</div>

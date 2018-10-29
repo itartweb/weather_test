@@ -1,0 +1,5 @@
+weather.configuration:
+  title: 'Weather settings'
+  parent: system.admin_config_services
+  description: 'Configure the weather test module.'
+  route_name: weather.configuration

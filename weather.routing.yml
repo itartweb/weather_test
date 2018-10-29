@@ -1,0 +1,54 @@
+weather.configuration:
+  path: '/admin/config/services/weather'
+  defaults:
+    _form: '\Drupal\weather\Form\WeatherSettingsForm'
+    _title: 'Weather settings'
+  requirements:
+    _permission: 'access administration pages'
+
+weather.weather_city_autocomplete:
+  path: '/weather_city/autocomplete'
+  defaults:
+    _controller: '\Drupal\weather\Controller\WeatherController::autocomplete'
+  requirements:
+    _permission: 'access administration pages'
+
+entity.weather_city.canonical:
+  path: '/weather_city/{weather_city}'
+  defaults:
+    _entity_view: 'weather_city'
+    _title: 'Weather city'
+  requirements:
+    _entity_access: 'weather_city.view'
+
+entity.weather_city.collection:
+  path: '/weather_city/list'
+  defaults:
+    _entity_list: 'weather_city'
+    _title: 'Weather city list'
+  requirements:
+    _permission: 'administer weather city entity'
+
+weather_city.weather_city_add:
+  path: '/weather_city/add'
+  defaults:
+    _entity_form: weather_city.add
+    _title: 'Add weather city'
+  requirements:
+    _entity_create_access: 'weather_city'
+
+entity.weather_city.edit_form:
+  path: '/weather_city/{weather_city}/edit'
+  defaults:
+    _entity_form: weather_city.edit
+    _title: 'Edit weather city'
+  requirements:
+    _entity_access: 'weather_city.edit'
+
+entity.weather_city.delete_form:
+  path: '/weather_city/{weather_city}/delete'
+  defaults:
+    _entity_form: weather_city.delete
+    _title: 'Delete weather city'
+  requirements:
+    _entity_access: 'weather_city.delete'

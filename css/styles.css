@@ -1,0 +1,20 @@
+.weather-city .row{
+  float: left;
+  width: 100%;
+  clear: both;
+}
+
+.weather-city .temperature {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.weather-city .left {
+  float:left;
+  width: 50%;
+}
+
+.weather-city .right {
+  float:right;
+  width: 50%;
+}

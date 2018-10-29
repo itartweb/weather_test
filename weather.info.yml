@@ -1,0 +1,9 @@
+name: 'Weather'
+type: module
+description: 'Weather test module by https://openweathermap.org.'
+# core: 8.x
+package: Test
+
+configure: weather.configuration
+
+core: '8.x'
